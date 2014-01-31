@@ -1,14 +1,22 @@
 ___author__ = 'ian.polding'
 
 import re
-from Tkinter import *
-import tkFileDialog
+from Tkinter import filedialog
+from Tkinter import
+# import tkFileDialog
 import os
 
+class MyF
+
 root = Tk()
-selectFileButton = Button (root, text="Open File")
-selectFileButton.pack()
+# selectFileButton = Button(root, text="Open File", command = self.openFile)
+
+Button(root, text='askopenfile', command=tkFileDialog.askopenfile().pack())
 root.mainloop()
+
+# def openFile():
+#      return tkFileDialog.askopenfile('r+', title='Please select file to remove regular expressions from')
+
 # inputFile =  tkFileDialog.askopenfile('r+', title='Please select file to remove regular expressions from')
 # if file != None:
 #     fileAsString = inputFile.read()
@@ -19,7 +27,7 @@ root.mainloop()
 #
 # fileForConversion = open(pathToFile, 'r+')
 
-def removeExpression():
+def removeExpression(inputFile):
     userRegEx = raw_input("Enter the regular expression to remove:")
     pattern = re.compile(userRegEx)
     outputFileName = tkFileDialog.asksaveasfilename()
@@ -44,6 +52,12 @@ def removeExpression():
 #     print 'y response is working'
 #
 # print 'n response is working'
+
+
+
+
+
+
 
 
 
