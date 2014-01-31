@@ -1,4 +1,4 @@
-_author__ = 'ian.polding'
+___author__ = 'ian.polding'
 
 import re
 from Tkinter import *
@@ -6,9 +6,12 @@ import tkFileDialog
 import os
 
 root = Tk()
-inputFile =  tkFileDialog.askopenfile('r+', title='Please select file to remove regular expressions from')
-if file != None:
-    fileAsString = inputFile.read()
+selectFileButton = Button (root, text="Open File")
+selectFileButton.pack()
+root.mainloop()
+# inputFile =  tkFileDialog.askopenfile('r+', title='Please select file to remove regular expressions from')
+# if file != None:
+#     fileAsString = inputFile.read()
 # print "All files are found in " + inputFilePath
 # # fileName = raw_input("Enter File name")
 # fileName='FacebookScript.txt'
@@ -16,16 +19,16 @@ if file != None:
 #
 # fileForConversion = open(pathToFile, 'r+')
 
-userRegEx = raw_input("Enter the regular expression to remove:")
-pattern = re.compile(userRegEx)
+def removeExpression():
+    userRegEx = raw_input("Enter the regular expression to remove:")
+    pattern = re.compile(userRegEx)
+    outputFileName = tkFileDialog.asksaveasfilename()
+    outputFile = open(outputFileName, 'w+')
+    outputFile.write(pattern.sub('', fileAsString))
+    outputFile.close()
+    os.system('notepad ' + outputFileName)
 
 
-outputFileName = tkFileDialog.asksaveasfilename()
-outputFile = open(outputFileName, 'w+')
-outputFile.write(pattern.sub('', fileAsString))
-outputFile.close()
-
-os.system('notepad ' + outputFileName)
 #
 # answer = raw_input("Would you like to continue. Please enter Y or N")
 
@@ -41,3 +44,9 @@ os.system('notepad ' + outputFileName)
 #     print 'y response is working'
 #
 # print 'n response is working'
+
+
+
+
+
+
