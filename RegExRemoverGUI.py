@@ -2,10 +2,12 @@ __author__ = 'ian.polding'
 
 from Tkinter import Tk, Frame, BOTH, Button, Entry, Label
 import tkFileDialog
+import FileManager
+import tkMessageBox
 import re
 import os
 
-class Example(Frame):
+class RegExRemover(Frame):
 
     processingButton = Button
 
@@ -13,10 +15,12 @@ class Example(Frame):
         # we call the constructor of Frame - the inherited class
         Frame.__init__(self, parent, background="white")
         #we store a reference to the parent widget - in this case it is Tk root window
-        self.fileName = None
-        self.parent = parent
         self.regularExpressionString = None
+        self.fileManager = FileManager()
+        self.inputFile
+        self.currentFile
         self.initUI()
+
 
 
 
@@ -28,27 +32,31 @@ class Example(Frame):
         #pack organises widgets into vertical and horizontal boxes. It is one of three geometry managers
         #expanded in both directions
         self.pack(fill=BOTH, expand=1)
-        self.processingButton = Button(text = "Open file", command=self.openFile)
+        self.uploadFileButton = Button(text = "Upload file", command=self.fileManager.openFile())
         self.processingButton.place(x=50, y=50)
+        self.viewCurrentFileButton = Button(text = "View file in text editor", command=self.viewFile() )
 
 
-    def openFile(self):
-        self.fileToProcess =  tkFileDialog.askopenfile('r+', title="Select file to process")
-        self.processingButton.configure(text = "Remove Expression", command=self.processFile)
-        fileBeingProcessed = Entry(cursor="dot")
-        fileBeingProcessed.insert(0, self.fileToProcess.name)
-        fileBeingProcessed.place(x = 0, y = 0)
-        self.textEntry = Entry(cursor="dot")
-        self.regexLabel = Label(text="Enter regex to remove: ")
-        self.regexLabel.place(x=50, y = 10)
-        self.textEntry.place(x=50, y=30)
-        return self.fileToProcess
+    def viewFile(self):
+        if self.currentFile:
+            os.system('gedit ' + self.currentFile)
+        else:
+            tkMessageBox.showwarning("No file selected", "Please select a file to upload")
+
+    def startProcessingFile(self):
+        #self.processingButton = "Process file", command = self.processFile())
+        self.inputFile = self.fileManager.openFile()
+        self.currentFile = self.inputFile
+
+
+
 
     def processFile(self):
-        if self.fileToProcess:
+        fileToProcess = self.fileManager.inputFile
+        if fileToProcess:
             fileAsString = self.fileToProcess.read()
             pattern = re.compile(self.textEntry.get())
-            outputFileName = tkFileDialog.asksaveasfilename()
+            outputFileName = self.fileManager.outputFile
             outputFile = open(outputFileName, 'w+')
             outputFile.write(pattern.sub('', fileAsString))
             outputFile.close()
@@ -70,9 +78,10 @@ def main():
         fileToProcess = None
         #window size
         root.geometry("250x150+300+300")
-        app = Example(root) #this root is the parent variable
+        app = RegExRemover(root) #this root is the parent variable
         root.mainloop()
         fileToProcess = None
+        fileManager = FileManager()
 
 
 

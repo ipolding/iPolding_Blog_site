@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6df91fc0-e66c-4d23-9889-f77d5fa962bd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test1 remove the letter a.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test2 remove the letter c.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test2 remove the letter e.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TkinterTutorial.py" afterPath="$PROJECT_DIR$/TkinterTutorial.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/RegExRemover.py" afterPath="$PROJECT_DIR$/OldRegExRemover.py" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/TkinterTutorial.py" afterPath="$PROJECT_DIR$/RegExRemoverGUI.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FileManager.py" afterPath="$PROJECT_DIR$/FileManager.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="PythonMiniProjects.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,10 +28,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TkinterTutorial.py" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/TkinterTutorial.py">
+      <file leaf-file-name="RegExRemoverGUI.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/RegExRemoverGUI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="0" selection-start="546" selection-end="546" vertical-scroll-proportion="0.104166664" vertical-offset="225" max-vertical-offset="1380">
+            <state line="7" column="9" selection-start="164" selection-end="164" vertical-scroll-proportion="0.18518518" vertical-offset="0" max-vertical-offset="1515">
               <folding>
                 <element signature="e#28#85#0" expanded="true" />
               </folding>
@@ -40,10 +39,28 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="FileManager.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FileManager.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="0" selection-start="21" selection-end="21" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OldRegExRemover.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/OldRegExRemover.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1050">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="test1 remove the letter a.txt" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test1 remove the letter a.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="0" selection-start="10994" selection-end="10994" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+            <state line="25" column="0" selection-start="10994" selection-end="10994" vertical-scroll-proportion="0.0" vertical-offset="375" max-vertical-offset="510">
               <folding />
             </state>
           </provider>
@@ -52,7 +69,7 @@
       <file leaf-file-name="test2 remove the letter c.txt" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test2 remove the letter c.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="120" selection-start="1815" selection-end="1815" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
+            <state line="15" column="120" selection-start="1815" selection-end="1815" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="330">
               <folding />
             </state>
           </provider>
@@ -61,7 +78,7 @@
       <file leaf-file-name="test2 remove the letter e.txt" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test2 remove the letter e.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="120" selection-start="2542" selection-end="2542" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
+            <state line="22" column="120" selection-start="2542" selection-end="2542" vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="450">
               <folding />
             </state>
           </provider>
@@ -71,9 +88,7 @@
         <entry file="file://$PROJECT_DIR$/test.py">
           <provider selected="true" editor-type-id="text-editor">
             <state line="19" column="21" selection-start="506" selection-end="506" vertical-scroll-proportion="0.0" vertical-offset="495" max-vertical-offset="1665">
-              <folding>
-                <element signature="e#28#71#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -102,13 +117,14 @@
         <option value="$PROJECT_DIR$/test2 remove the letter c.txt" />
         <option value="$PROJECT_DIR$/test2 remove the letter e.txt" />
         <option value="$PROJECT_DIR$/TkinterTutorial.py" />
+        <option value="$PROJECT_DIR$/RegExRemoverGUI.py" />
+        <option value="$PROJECT_DIR$/FileManager.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="49" />
     <option name="y" value="24" />
-    <option name="width" value="1871" />
+    <option name="width" value="1920" />
     <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -187,7 +203,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="PythonMiniProjects" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TkinterTutorial.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RegExRemoverGUI.py" />
       <option name="PARAMETERS" value="" />
       <RunnerSettings RunnerId="PyDebugRunner" />
       <RunnerSettings RunnerId="PythonRunner" />
@@ -335,26 +351,26 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="49" y="24" width="1871" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="24" width="1920" height="1056" extended-state="6" />
+    <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18706574" sideWeight="0.67050207" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18697916" sideWeight="0.6610879" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39958158" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3398058" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33891213" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -371,12 +387,47 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/RegExRemoverGUI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="0" selection-start="546" selection-end="546" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="1380">
+          <folding>
+            <element signature="e#28#85#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test1 remove the letter a.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="0" selection-start="10994" selection-end="10994" vertical-scroll-proportion="0.0" vertical-offset="375" max-vertical-offset="510">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test2 remove the letter c.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="120" selection-start="1815" selection-end="1815" vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="330">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test2 remove the letter e.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="120" selection-start="2542" selection-end="2542" vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="450">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="21" selection-start="506" selection-end="506" vertical-scroll-proportion="0.0" vertical-offset="495" max-vertical-offset="1665">
-          <folding>
-            <element signature="e#28#71#0" expanded="true" />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="21" selection-start="506" selection-end="506" vertical-scroll-proportion="0.0" vertical-offset="495" max-vertical-offset="1665">
+          <folding />
         </state>
       </provider>
     </entry>
@@ -401,9 +452,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TkinterTutorial.py">
+    <entry file="file://$PROJECT_DIR$/OldRegExRemover.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="546" selection-end="546" vertical-scroll-proportion="0.104166664" vertical-offset="225" max-vertical-offset="1380">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1050">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FileManager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="21" selection-end="21" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RegExRemoverGUI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="9" selection-start="164" selection-end="164" vertical-scroll-proportion="0.18518518" vertical-offset="0" max-vertical-offset="1515">
           <folding>
             <element signature="e#28#85#0" expanded="true" />
           </folding>
