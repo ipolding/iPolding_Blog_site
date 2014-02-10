@@ -2,12 +2,12 @@ __author__ = 'ian.polding'
 
 from Tkinter import Tk, Frame, BOTH, Button, Entry, Label
 import tkFileDialog
-import FileManager
+from FileManager import FileManager
 import tkMessageBox
 import re
 import os
 
-class RegExRemover(Frame):
+class RegExRemoverGUI(Frame):
 
     processingButton = Button
 
@@ -17,9 +17,11 @@ class RegExRemover(Frame):
         #we store a reference to the parent widget - in this case it is Tk root window
         self.regularExpressionString = None
         self.fileManager = FileManager()
-        self.inputFile
-        self.currentFile
+        self.inputFile = None
+        self.currentFile = None
+        self.parent = parent
         self.initUI()
+
 
 
 
@@ -32,10 +34,20 @@ class RegExRemover(Frame):
         #pack organises widgets into vertical and horizontal boxes. It is one of three geometry managers
         #expanded in both directions
         self.pack(fill=BOTH, expand=1)
-        self.uploadFileButton = Button(text = "Upload file", command=self.fileManager.openFile())
-        self.processingButton.place(x=50, y=50)
-        self.viewCurrentFileButton = Button(text = "View file in text editor", command=self.viewFile() )
+        self.uploadFileButton = Button(text = "Upload file", command=self.uploadFile)
+        self.uploadFileButton.place(x=30, y=50)
+        
+        
 
+    def uploadFile(self):
+        self.fileManager.openFile()
+        inputFileName = self.fileManager.inputFile.name
+        #print inputFileName
+        self.currentFile = inputFileName
+        # TODO fix this Entry object
+        toProcessEntry = Entry(text=self.currentFile)
+        toProcessEntry.place(x=100, y=50)
+        #viewCurrentFileButton = Button(text = "View file in text editor", command=self.viewFile() )
 
     def viewFile(self):
         if self.currentFile:
@@ -78,7 +90,7 @@ def main():
         fileToProcess = None
         #window size
         root.geometry("250x150+300+300")
-        app = RegExRemover(root) #this root is the parent variable
+        app = RegExRemoverGUI(root) #this root is the parent variable
         root.mainloop()
         fileToProcess = None
         fileManager = FileManager()
