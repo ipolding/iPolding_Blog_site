@@ -3,8 +3,8 @@ import tkFileDialog
 class FileManager(object):
 
     def __init__(self):
-        self.inputFile
-        self.outputFile
+        self.inputFile = None
+        self.outputFile = None
 
     def openFile(self):
         """ This acts as the setter of the filename property using tkinter's browse dialog """
