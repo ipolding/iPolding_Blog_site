@@ -1,11 +1,12 @@
 __author__ = 'ian.polding'
 
-from Tkinter import Tk, Frame, BOTH, Button, Entry, Label, StringVar
+from Tkinter import Tk, Frame, BOTH, Button, Entry, Label, StringVar, END
 import tkFileDialog
 from FileManager import FileManager
 import tkMessageBox
 import re
 import os
+import tkFileDialog
 
 class RegExRemoverGUI(Frame):
 
@@ -15,10 +16,14 @@ class RegExRemoverGUI(Frame):
         # we call the constructor of Frame - the inherited class
         Frame.__init__(self, parent, background='grey')
         #we store a reference to the parent widget - in this case it is Tk root window
+        
+        # instance variables for the RegExRemoverGui class
         self.file_to_process = None
         self.regular_expression_string = None
-        self.fileManager = FileManager()
+        self.path_to_input_file = None
         self.inputFile = None
+        self.file_manager = FileManager()
+        
         self.file_to_process = StringVar()
         self.parent = parent
         Label(text="File to process", bg = 'grey' ).place(x=10, y = 80)
@@ -38,10 +43,10 @@ class RegExRemoverGUI(Frame):
         self.upload_file_button.place(x=upload_file_x_coordinate, y=50)
 
     def press_upload_file_button(self):
-        self.fileManager.open_file()
+        self.file_manager.open_file()
         # Given the complete path, this produces the string filename.extension
-        path_to_input_file = self.fileManager.input_file.name
-        input_file_name = os.path.basename(path_to_input_file)
+        self.path_to_input_file = self.file_manager.input_file.name
+        input_file_name = os.path.basename(self.path_to_input_file)
         self.file_to_process.set(input_file_name)  
         # Once a file is upload - a button is placed to view it
         # Here is the windows configuration. For Ubuntu, change notepad to gedit
@@ -53,29 +58,37 @@ class RegExRemoverGUI(Frame):
         # make the regular expression entry box visible by only placing it after a file is uploaded
         self.reg_ex_entry.place(x = 100, y = reg_ex_entry_y_coordinate)
         process_file_button = Button(text = "Process file", command=self.press_process_file_button)
-        process_file_button.place(x = 10, y = 120)
+        process_file_button.place(x = 10, y = 123)
 
     def press_process_file_button(self):
-        fileAsString = self.fileManager.input_file.read()
+        fileAsString = self.file_manager.input_file.read()
         pattern = re.compile(self.reg_ex_entry.get())
-        outputFilePath = self.fileManager.save_file()
-        outputFile = open(outputFilePath, 'w+')
-        outputFile.write(pattern.sub(self.regExEntry.get(), fileAsString))
-        outputFile.close()
-        view_output_file_button = Button(text = "View output file", command=lambda:os.system('notepad ' + path_to_input_file) )
-        view_output_file_button.place(x=100, y = 120)
+        #this should return an _open_file_
+        output_file = tkFileDialog.asksaveasfile(title="Select save location")
+        # the reg ex pattern is removed here
+        output_file.write(pattern.sub('', fileAsString))
+        output_file.close()
+        # here is where the instance variables are reset. The most recent output can be viewed.
+        view_output_file_button = Button(text = "View most recent output", command=lambda:os.system('notepad ' + output_file.name) )
+        view_output_file_button.place(x=100, y = 123)
+        self.clear_ui_components()
+        
+
+    def clear_ui_components(self):
+        self.reg_ex_entry.delete(0, END)
+        self.file_manager.clear_input_file()
+        self.file_to_process.set('')
+        self.path_to_input_file = None
+
         
 
 def main():
 
         root = Tk()
-        file_to_process = None
         #window size
         root.geometry("250x150+300+300")
         app = RegExRemoverGUI(root) #this root is the parent variable
-        root.mainloop()
-        file_to_process = None
-        fileManager = FileManager()
+        root.mainloop()        
 
 if __name__ == '__main__':
     main()
