@@ -3,20 +3,12 @@ import tkFileDialog
 class FileManager(object):
 
     def __init__(self):
-        self.inputFile = None
-        self.outputFile = None
+        self.input_file = None
+        self.output_file = None
 
-    def openFile(self):
+    def open_file(self):
         """ This acts as the setter of the filename property using tkinter's browse dialog """
-        self.inputFile =  tkFileDialog.askopenfile('r+', title="Select file to process")
+        self.input_file =  tkFileDialog.askopenfile('r+', title="Select file to process")
 
-
-    def saveFile(self):
-        """ This acts as the setter of the filename property using tkinter's browse dialog """
-        self.outputFile = tkFileDialog.asksaveasfilename()
-
-
-
-
-
-
+    def clear_input_file(self):
+    	self.input_file = None  	
