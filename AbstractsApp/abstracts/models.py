@@ -8,6 +8,10 @@ class Journal(models.Model):
     def __unicode__(self):
         return self.journal_title
 
+    def is_plos_article(self):
+        if 'PLOS' in self.journal_title:
+            return True
+
 
 class Abstract(models.Model):
     title = models.CharField(max_length=200)
