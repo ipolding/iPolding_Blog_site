@@ -12,9 +12,10 @@ from abstracts.models import Abstract, Journal
 
 def get_all_abstracts(request):
 
-    serialized_data = serializers.serialize("json", Journal.objects.all())
+    serialized_data = serializers.serialize("python", Journal.objects.filter(journal_title="PLOS Computational Biology"))
 
-    data = json.dumps(serialized_data, indent=4)
+    data = json.dumps(serialized_data)
+    # return HttpResponse(data, mimetype='application/json')
     return HttpResponse(data)
 
 
