@@ -36,6 +36,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'blog'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -58,7 +59,7 @@ WSGI_APPLICATION = 'iPolding_Blog.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'iPolding_Blog_Entries'),
+        'NAME': os.path.join(BASE_DIR, 'iPolding_Blog_Entries.db'),
     }
 }
 
