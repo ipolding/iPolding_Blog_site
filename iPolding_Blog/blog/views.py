@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse, Http404
 from django import template
+from django.utils import timezone
 from django.views import generic
 from django.views.generic import ListView
 
@@ -17,12 +18,16 @@ class IndexView(generic.ListView):
 
     def get_queryset(self):
         """Return the last five published blog entries"""
-        return Entry.objects.order_by('-pub_date')[:5]
+        return Entry.objects.filter(pub_date__lte=timezone.now()
+            ).order_by('-pub_date')[:5]
 
 
 class DetailView(generic.DetailView):
     model = Entry
     template_name = 'blog/entry.html'
+
+    def get_queryset(self):
+        return Entry.objects.filter(pub_date__lte=timezone.now())
 
 
 def index(request):
