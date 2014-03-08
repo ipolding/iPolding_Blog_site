@@ -1,0 +1,14 @@
+
+<article>
+    <h1 class="entryTitle">{{ entry.title }}</h1>
+    <time>Published on {{ entry.pub_date|date }} by {{ entry.author }}</time>
+    <br>
+    <section>
+        {{ entry.text|safe }}
+    </section>
+
+</article>
+
+
+
+
