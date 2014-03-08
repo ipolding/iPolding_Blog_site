@@ -3,7 +3,7 @@ from django.conf.urls import patterns, url
 from blog import views
 
 urlpatterns = patterns('',
-    url(r'^$', views.index, name='index'),
-    url(r'^entry/(?P<entry_id>\d+)$', views.entry, name='blog'),
+    url(r'^$', views.IndexView.as_view(), name='index'),
+    url(r'^entry/(?P<pk>\d+)$', views.DetailView.as_view(), name='blog_entry'),
 
 )

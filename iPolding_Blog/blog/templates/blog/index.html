@@ -1,11 +1,9 @@
 {% if latest_blog_entries %}
     <ul>
     {% for entry in latest_blog_entries %}
-        <li><a href="/blog/entry/{{ entry.id }}">{{ entry.title }}</a></li>
+        <li><a href="{% url 'blog_entry' entry.id %}">{{ entry.title }}</a></li>
     {% endfor %}
     </ul>
 {% else %}
     <p>No blog entries are available.</p>
 {% endif %}
-
-        THE VIEWS ARE BROKEN
